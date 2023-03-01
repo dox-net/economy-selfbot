@@ -8,7 +8,7 @@ This entire thing was made in an hour :)
 `Randomness` Adds 3-10 minutes onto `TaskTime`.<br>
 `ChannelID` The channel ID in which tasks will be completed; Works in DMs.<br>
 `TaskMessages` Message(s) sent during task; Seaperated with commas.<br>
-`Token` Your discord token; See how to get your token [here](https://github.com/dox-net/economy-selfbot/blob/main/Token_Guide.PNG).
+`Token` Your Discord token; See how to get your token [here](https://github.com/dox-net/economy-selfbot/blob/main/Token_Guide.PNG).
 
 ## Installing
 This project requires that you have `selfcord.py` installed.
