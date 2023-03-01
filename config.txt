@@ -1,0 +1,11 @@
+[Configuration]
+# amount of time between tasks (minutes) #
+TaskTime = 60
+# adds some random delay between tasks #
+Randomness = False
+# the channel tasks should be completed #
+ChannelID = 000000000000
+# send multiple messages in your task #
+TaskMessages = !work,!dep all
+# your discord token #
+Token = TOKEN_GOES_HERE
