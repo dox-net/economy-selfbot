@@ -3,6 +3,8 @@
 TaskTime = 60
 # adds some random delay between tasks #
 Randomness = False
+# shows the timestamp for when a task was complete #
+Timestamps = True
 # the channel tasks should be completed #
 ChannelID = 000000000000
 # send multiple messages in your task #
