@@ -3,10 +3,11 @@ from selfcord.ext import tasks
 import random
 import asyncio
 import configparser
+from datetime import datetime
 import os
 
 config = configparser.ConfigParser()
-config_file = os.path.join(os.path.dirname(__file__), 'config.txt')
+config_file = os.path.join(os.path.dirname(__file__), 'config_test.txt')
 config.read(config_file)
 
 client = selfcord.Client()
@@ -16,6 +17,7 @@ randomness = bool(config.get('Configuration','Randomness'))
 messages = str(config.get('Configuration','TaskMessages')).split(",")
 timed = int(config.get('Configuration','TaskTime'))
 token = str(config.get('Configuration','Token'))
+timestamper = bool(config.get('Configuration','Timestamps'))
 delay = 0
 completed=0
 
@@ -32,7 +34,12 @@ async def best_loop():
             await asyncio.sleep(6)
         global completed
         completed+=1
-        print(f'Task completed! ({completed})')
+        if timestamper == True:
+            timestamp = datetime.fromtimestamp(datetime.timestamp(datetime.now()))
+            timestampstr = timestamp.strftime("%H:%M:%S")
+            print(f'Task completed! [{timestampstr}] (x{completed})')
+        else:
+            print(f'Task completed! (x{completed})')
     except:
         print('Improper configuration! :(')
 
